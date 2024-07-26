@@ -7,9 +7,12 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="font-poppins flex justify-center items-center min-h-screen bg-slateblue">
+      <App />
+    </div>
   </React.StrictMode>
 );
 
