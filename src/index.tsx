@@ -10,9 +10,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <div className="font-poppins flex justify-center items-center min-h-screen bg-slateblue">
-      <App />
-    </div>
+    <App />
   </React.StrictMode>
 );
 
