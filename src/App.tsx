@@ -1,12 +1,13 @@
-import LoginRegister from './components/LoginRegister'
+// src/App.tsx
 import React from 'react';
+import LoginForm from './components/LoginForm';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <LoginRegister/>
+    <div className="flex items-center justify-center min-h-screen">
+      <LoginForm />
     </div>
   );
-}
+};
 
 export default App;
