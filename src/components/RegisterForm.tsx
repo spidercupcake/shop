@@ -4,22 +4,23 @@ import Input from './Input';
 import Button from './Button';
 import Form from './Form';
 
-interface LoginFormProps {
+interface RegisterFormProps {
   toggleForm: () => void;
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
+const RegisterForm: React.FC<RegisterFormProps> = ({ toggleForm }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Username:', username, 'Password:', password);
+    console.log('Username:', username, 'Password:', password, 'Email:', email);
   };
 
   return (
-    <Form title="Login" onSubmit={handleSubmit}>
+    <Form title="Register" onSubmit={handleSubmit}>
       <Input
         type="text"
         placeholder="Username"
@@ -30,6 +31,15 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
         onChange={(e) => setUsername(e.target.value)}
       />
       <Input
+        type="email"
+        placeholder="Email"
+        icon={FaUser}
+        required
+        name="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <Input
         type="password"
         placeholder="Password"
         icon={FaLock}
@@ -38,19 +48,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <div className="flex justify-between items-center text-sm text-white mb-4">
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2" />
-          Remember Me
-        </label>
-        <a href="#" className="text-white hover:underline">Forgot Password</a>
-      </div>
-      <Button type="submit">Login</Button>
-      <div className="text-white text-center mt-4">
+      <Button type="submit">Register</Button>
+      <div className="text-gray-300 text-center mt-4">
         <p>
-          Don't have an account?{' '}
-          <a href="#" onClick={toggleForm} className="text-white font-semibold hover:underline">
-            Register
+          Already have an account?{' '}
+          <a href="#" onClick={toggleForm} className="font-semibold hover:underline">
+            Login
           </a>
         </p>
       </div>
@@ -58,4 +61,4 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
