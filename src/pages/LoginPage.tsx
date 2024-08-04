@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
-import LoginForm from '../components/LoginForm';
-import RegisterForm from '../components/RegisterForm';
+import LoginRegisterForm from '../components/LoginRegisterForm';
 
 const LoginPage: React.FC = () => {
-  const [isRegistering, setIsRegistering] = useState(false);
+  const [formType, setFormType] = useState<'login' | 'register'>('login');
 
   const toggleForm = () => {
-    setIsRegistering(!isRegistering);
+    setFormType((prev) => (prev === 'login' ? 'register' : 'login'));
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-transparent">
-      {isRegistering ? (
-        <RegisterForm toggleForm={toggleForm} />
-      ) : (
-        <LoginForm toggleForm={toggleForm} />
-      )}
+      <LoginRegisterForm formType={formType} toggleForm={toggleForm} />
     </div>
   );
 };
