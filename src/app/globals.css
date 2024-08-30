@@ -1,9 +1,7 @@
-/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styles */
 body {
   @apply font-poppins flex justify-center items-center min-h-screen;
   @apply bg-custom-image;
@@ -14,8 +12,7 @@ body {
 }
 
 .bg-custom-image {
-  /* Ensure the path is correct and the image is accessible */
-  background-image: url('../public/assets/1351633.png');
+  background-image: url("/assets/1351633.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

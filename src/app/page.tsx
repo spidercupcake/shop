@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <h1 className="text-4xl font-bold">Welcome to the Home Page</h1>
@@ -8,4 +8,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;
