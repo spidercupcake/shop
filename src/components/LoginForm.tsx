@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
-import { FaUser, FaLock } from 'react-icons/fa';
-import Input from './Input';
-import Button from './Button';
-import Form from './Form';
+"use client";
+import React, { useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
+import Input from "./Input";
+import Button from "./Button";
+import Form from "./Form";
+import Link from "next/link";
 
 interface LoginFormProps {
   toggleForm: () => void;
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Username:', username, 'Password:', password);
+    console.log("Username:", username, "Password:", password);
   };
 
   return (
@@ -43,15 +44,20 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleForm }) => {
           <input type="checkbox" className="mr-2" />
           Remember Me
         </label>
-        <a href="#" className="text-white hover:underline">Forgot Password</a>
+        <Link href="/forgot-password" className="text-white hover:underline">
+          Forgot Password
+        </Link>
       </div>
       <Button type="submit">Login</Button>
       <div className="text-white text-center mt-4">
         <p>
-          Don't have an account?{' '}
-          <a href="#" onClick={toggleForm} className="text-white font-semibold hover:underline">
+          Don't have an account?{" "}
+          <button
+            onClick={toggleForm}
+            className="text-white font-semibold hover:underline"
+          >
             Register
-          </a>
+          </button>
         </p>
       </div>
     </Form>

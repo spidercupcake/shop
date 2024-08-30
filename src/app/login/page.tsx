@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import LoginForm from '../components/LoginForm';
-import RegisterForm from '../components/RegisterForm';
+"use client";
+import React, { useState } from "react";
+import LoginForm from "@/components/LoginForm";
+import RegisterForm from "@/components/RegisterForm";
 
 const LoginPage: React.FC = () => {
   const [isRegistering, setIsRegistering] = useState(false);
