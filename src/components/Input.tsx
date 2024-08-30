@@ -1,5 +1,5 @@
-import React from 'react';
-import { IconType } from 'react-icons';
+import React from "react";
+import { IconType } from "react-icons";
 
 interface InputProps {
   type: string;
@@ -36,7 +36,9 @@ const Input: React.FC<InputProps> = ({
         className="w-full p-3 pr-10 bg-transparent border-2 border-white rounded-full text-white placeholder-white focus:outline-none"
         aria-label={ariaLabel}
       />
-      <Icon className={`absolute right-4 top-1/2 transform -translate-y-1/2 ${iconColor}`} />
+      <Icon
+        className={`absolute right-4 top-1/2 transform -translate-y-1/2 ${iconColor}`}
+      />
     </div>
   );
 };
