@@ -7,7 +7,7 @@
 
 - [ ] **Shop page (Home)**
 
-  - [ ] A thin red bar on top for ongoing sales with text moving from right to left
+  - [x] A thin red bar on top for ongoing sales with text moving from right to left (Made it Pink)
   - [ ] **Navigation bar**
     - [ ] With Logo on the Left and Signup/Signin on the right
     - [ ] Below that, Categories, Filters, Helpline, and About Us on the Left
