@@ -18,6 +18,7 @@ const config: Config = {
       },
       colors: {
         hotpink: "#FF69B4",
+        gold: "",
       },
     },
   },

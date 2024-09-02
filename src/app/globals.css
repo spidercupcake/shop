@@ -12,7 +12,7 @@ body {
 }
 
 .bg-custom-image {
-  background-image: url("/assets/1351633.png");
+  background-image: url("/assets/beach.jpg"); /* Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2562563">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2562563">Pixabay</a> */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
